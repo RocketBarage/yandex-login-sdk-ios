@@ -181,7 +181,7 @@
         [application openURL:url options:options completionHandler:completion];
     }
     else {
-        BOOL result = [application openURL:url];
+        BOOL result = [application openURL:url options:@{} completionHandler:nil];
         if (completion != NULL) {
             completion(result);
         }
